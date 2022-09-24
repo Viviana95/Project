@@ -1,15 +1,17 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <Card/>
+
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+<script>
+import Card from '../components/Card.vue';
+  export default {
+    components: { Card }
 }
+</script>
+
+<style lang="scss" scoped>
+
 </style>
