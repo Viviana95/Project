@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 
 export const useCartStore = defineStore ({
-    id: 'desserts',
+    id: 'cart',
     state: () => ({
        shoppingList: []
     }), 
@@ -17,8 +17,14 @@ export const useCartStore = defineStore ({
        addDessertToCart(dessert){
         console.log ('pinia', dessert)
         this.shoppingList.push(dessert)
+        localStorage.setItem('carrito','guardado')
        },
-       remove
+       removeDessertToCart(id){
+         let cartDessert = this.shoppingList.find(item => item.id === id)
+         let cartIndex = this.shoppingList.indexOf(cartDessert)
+         this.shoppingList.splice(cartIndex, 1 )
+       }
+       
        
     }
 })

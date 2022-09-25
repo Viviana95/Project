@@ -23,11 +23,9 @@ const addDessertCart = (dessertId) => {
 </script>
 
 <template>
-  <div id="home">
-     <Dessert v-for="dessert in dessertStore.desserts" :id="dessert.id" :image="dessert.image" :title="dessert.title"
-      :price="dessert.price" :description="dessert.description" @addDessertCart="addDessertCart" />  
-     
-   
+  <div class="row row-cols-2 row-cols-md-3 g-4" v-for="dessert in dessertStore.desserts">
+     <Dessert  :id="dessert.id" :image="dessert.image" :title="dessert.title"
+      :price="dessert.price" :description="dessert.description" @addDessertCart="addDessertCart" />    
   </div>
 
 </template>

@@ -10,7 +10,7 @@ const props = defineProps({
         type: String, required: true
     },
     price: {
-        type: String, required: true
+        type: Number, required: true
     },
     description: {
         type: String, default: null
@@ -25,7 +25,6 @@ const emitDessert = () => {
 </script>
 
 <template>
-<div class="row row-cols-1 row-cols-md-3 g-4 bg-dark">
     <div class="col">
         <div class="card bg-info" >
             <img :src="image" class="card-img-top" alt="...">
@@ -37,7 +36,7 @@ const emitDessert = () => {
             </div>
         </div>
     </div>
-</div>
+
 </template>
 
 <style lang="scss" scoped>
