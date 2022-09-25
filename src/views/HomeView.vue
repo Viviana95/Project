@@ -17,8 +17,8 @@ const getDesserts = async () => {
   await dessertStore.fetchDesserts()
 }
 const addDessertCart = (dessertId) => {
-  console.log('dessertId',dessertId)
-  //cartStore.addDessertToCart(dessert)
+  const dessert = dessertStore.getDessertId(dessertId)
+  cartStore.addDessertToCart(dessert)
 }
 </script>
 

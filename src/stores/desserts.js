@@ -12,6 +12,9 @@ export const useDessertsStore = defineStore ({
             .then(data=> {
                 this.desserts = data
             })
+        },
+        getDessertId (id) {
+            return this.desserts.find(dessert => dessert.id === id)
         }
     }
 })
