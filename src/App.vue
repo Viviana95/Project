@@ -5,28 +5,23 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 <template> 
 <div>
-  <!-- <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid"></div>
-        <a class="navbar-brand" href="#">Navbar w/ text</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg bg-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">DESSERT</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-      </ul>
-      
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link disabled">Disabled</a>
+      </div>
     </div>
-  
-</nav> -->
+  </div>
+    
+  </nav>
   <header>         
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -41,7 +36,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 </template>
 
 <style scoped>
-/* header {
+ /* header {
   line-height: 1.5;
   max-height: 100vh;
 }
@@ -101,5 +96,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-} */
+}  */
 </style>

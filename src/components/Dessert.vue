@@ -16,31 +16,35 @@ const props = defineProps({
         type: String, default: null
     }
 })
+const emits = defineEmits(['addDessertCart'])
 
+//methods
+const emitDessert = () => {
+    emits('addDessertCart', props.id)
+}
 </script>
 
 <template>
-
+<div class="row row-cols-1 row-cols-md-3 g-4 bg-dark">
     <div class="col">
-        <div class="card">
+        <div class="card bg-info" >
             <img :src="image" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{title}}</h5>
                 <p class="card-text">{{description}}</p>
-                <p class="card-text">{{price}}</p>
-                <a href="#" class="btn btn-primary">Añadir</a>
+                <h3 class="card-text">{{price}}</h3>
+                <button @click="emitDessert" class="btn btn-primary">Añadir</button>
             </div>
         </div>
     </div>
-
+</div>
 </template>
 
-
 <style lang="scss" scoped>
-.col {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr 2fr;
-    height: auto;
-}
+// .col {
+//     display: grid;
+//     justify-content: center;
+//     grid-template-columns: 1fr 2fr;
+//     height: auto;
+// }
 </style>
