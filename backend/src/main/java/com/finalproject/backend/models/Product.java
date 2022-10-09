@@ -7,8 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
 
 @Entity  //modelo
+@Data
 @Table(name = "products")
 public class Product {
 
@@ -31,7 +34,7 @@ public class Product {
         this.price = price;
         this.image = image;
     }
-    public Long getId() {
+  /*   public Long getId() {
         return id;
     }
     public void setId(Long id) {
@@ -114,7 +117,7 @@ public class Product {
     public String toString() {
         return "Product [id=" + id + ", title=" + title + ", description=" + description + ", price=" + price
                 + ", image=" + image + "]";
-    } 
+    }  */
 
 
 }
