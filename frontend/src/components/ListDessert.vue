@@ -1,4 +1,5 @@
 <script setup>
+import { useDessertsStore } from '../stores/desserts';
 
 
 const props = defineProps({
@@ -18,12 +19,10 @@ const props = defineProps({
         type: String, default: null
     }
 })
-const emits = defineEmits(['delete'])
+const {deleteDessert} = useDessertsStore()
 
 //methods
-const removeProduct = () => {
-    emits('delete', props.id)
-}
+ 
 
 </script>
 <template>
@@ -35,8 +34,8 @@ const removeProduct = () => {
     <td>{{price}}</td>
     <td>
         <!-- <img class="img m" src="../assets/edit.png" alt=""><img src="../assets/delete.png" alt=""> -->
-        <button type="button" class="btn btn-info">Editar</button>
-        <button type="button" class="btn btn-danger" @click="removeProduct()">Eliminar</button>
+        <button type="button" class="btn btn-info" @click="">Editar</button>
+        <button type="button" class="btn btn-danger" @click="deleteDessert()">Eliminar</button>
     </td>
 
 

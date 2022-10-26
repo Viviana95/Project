@@ -1,22 +1,13 @@
-<script setup>
-import { reactive } from 'vue';
+<!-- <script setup>
 import { useDessertsStore } from '../stores/desserts';
-const {addDessert} = useDessertsStore()
- const data = ({
-    
-    title:"",
-    description:"",
-    price:"",
-    image:""
- })
 
-//methods
-
+const dessertStore = useDessertsStore()
 </script>
+
 <template>
-    <div class="col bg-gradient m-5">
-        <h3>Añadir Producto</h3>
-        <div class="form-floating mb-3">
+  <div>
+  <h1>Editar </h1>
+  <div class="form-floating mb-3">
             <input v-model="data.title" type="text" class="form-control" id="floatingInput" placeholder="title">
             <label for="floatingInput">Title</label>
         </div>
@@ -36,6 +27,6 @@ const {addDessert} = useDessertsStore()
         <button @click="addDessert(data)" type="button" class="btn btn-info ms-5">Aceptar</button>
        
     </div>
-</template>
-<style>
-</style>
+
+  </div>
+</template> -->

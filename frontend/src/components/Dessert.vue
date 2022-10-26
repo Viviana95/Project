@@ -1,4 +1,6 @@
 <script setup>
+
+
 const props = defineProps({
     id: {
         type: Number, default: null
@@ -16,14 +18,14 @@ const props = defineProps({
         type: String, default: null
     }
 })
-const emits = defineEmits(['addDessertCart', 'delete'])
+const emits = defineEmits(['addDessertCart'])
+
 //methods
 const emitDessert = () => {
     emits('addDessertCart', props.id)
 }
-const emitDelete = () => {
-    emits('delete', props.id)
-}
+
+
 
 </script>
 

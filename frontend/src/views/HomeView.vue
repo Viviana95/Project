@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <!-- <div class="container">
+  <div class="container">
     <div class="card ">
       <img class="img-fluid " src="../assets/3.png" alt="">
     </div>
@@ -12,7 +12,7 @@
     <div class="card">
       <img class="img-fluid " src="../assets/4.png" alt="">
     </div>
-  </div> -->
+  </div>
 </template>
 <style scoped lang="scss">
 .container {

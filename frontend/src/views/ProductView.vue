@@ -8,10 +8,7 @@ import { useCartStore } from '../stores/cart';
 //stores declarar store
 const dessertStore = useDessertsStore()
 const cartStore = useCartStore()
-//lifecicle
-onBeforeMount(() => {
-  getDesserts()
-})
+
 //methods
 const getDesserts = async () => {
   await dessertStore.fetchDesserts()
@@ -27,7 +24,7 @@ const addDessertCart = (dessertId) => {
   <div class="row row-cols-1 row-cols-md-4 g-4">
   <div class="col" v-for="dessert in dessertStore.desserts">
      <Dessert  :id="dessert.id" :image="dessert.image" :title="dessert.title"
-      :price="dessert.price" :description="dessert.description" @addDessertCart="addDessertCart" @deletDessert="deleteDessert"/>    
+      :price="dessert.price" :description="dessert.description" @addDessertCart="addDessertCart"/>    
   </div>
 </div>
 

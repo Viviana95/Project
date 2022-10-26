@@ -8,16 +8,19 @@ import Form from '../components/Form.vue';
 //stores declarar store
 const dessertStore = useDessertsStore()
 
+//lifecicle
+onBeforeMount(() => {
+  getDesserts()
+})
 
 //methods
 
 const getDesserts = async () => {
   await dessertStore.fetchDesserts()
 }
-const destroyDessert = async(id) => {
+ const destroyDessert = async(id) => {
  await dessertStore.deleteDessert(id)
-
-}
+} 
 </script>
 
 <template>
@@ -40,7 +43,7 @@ const destroyDessert = async(id) => {
             </tr>
           </thead>
           <tbody>
-            <tr v-for="dessert in dessertStore.desserts">
+            <tr v-for="dessert in dessertStore.desserts" :key="dessert.id">
               <ListDessert :id="dessert.id" :image="dessert.image" :title="dessert.title" :price="dessert.price"
                 :description="dessert.description" @delete = "destroyDessert" />
             </tr>
