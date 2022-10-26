@@ -25,12 +25,18 @@ const cartDelet = () => {
 
 <template>
     <div>
-        <img :src="image" alt="">
-        <p>{{id}}</p>
-        <p>{{title}}</p>
-        <p>{{price}}</p>
-        <button @click="cartDelet">Eliminar</button>
-    </div>
+        <table class="table w-100"> 
+  <tbody>
+    <tr>
+        <th scope="row"></th> 
+            <td scope="col-8" class="">  <img class="img-center" :src="image" alt=""> </td>    
+        <td scope="col">{{title}}</td>
+        <td scope="col">{{price}}</td>
+        <td scope="col"><img type="button" class="img center" @click="cartDelet" src="../assets/quitar-del-carrito.png" alt=""></td>
+    </tr>
+  </tbody>
+  </table>
+     </div>
 </template>
 
 
